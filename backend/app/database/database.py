@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 DATABASE_URL = "sqlite:///./classgpt.db"
 
 engine = create_engine(
-    DATABASE_URl,
+    DATABASE_URL,
     connect_args={"check_same_thread": False}
 
 )

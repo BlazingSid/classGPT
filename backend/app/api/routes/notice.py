@@ -1,31 +1,24 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
+from sqlalchemy.orm import Session
 
-router = APIRouter(prefix="/notices", tags=["Notice"])
+from app.database.database import get_db
+from app.schemas.notice import NoticeCreate
+from app.services.notice_service import create_notice, get_all_notices
+
+router = APIRouter(
+    prefix="/notices",
+    tags=["Notices"]
+)
+
 
 @router.get("/")
-def get_notices():
-    return {
-        "notices": [
-            {
-                "id": 1,
-                "title": "DBMS Lecture Cancelled",
-                "message": "Today's DBMS lecture has been cancelled.",
-                "date": "2026-08-03"
-            }
-        ]
-    }
+def get_notices(db: Session = Depends(get_db)):
+    return get_all_notices(db)
+
 
 @router.post("/")
-def add_notice():
-    return {
-        "status": "success",
-        "message": "Notice added successfully."
-    }
-
-@router.delete("/{notice_id}")
-def delete_notice(notice_id: int):
-    return {
-        "status": "success",
-        "message": f"Notice {notice_id} deleted successfully"
-    }
-
+def add_notice(
+    notice: NoticeCreate,
+    db: Session = Depends(get_db)
+):
+    return create_notice(db, notice)
