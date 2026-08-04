@@ -1,5 +1,8 @@
 from fastapi import FastAPI
 
+from app.database.database import engine
+from app.database.base import Base
+from app.models.notice import Notice
 from app.api.routes.chat import router as chat_router
 from app.api.routes.upload import router as upload_router
 from app.api.routes.subject import router as subjects_router
