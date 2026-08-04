@@ -170,3 +170,12 @@ To build an AI-powered classroom assistant that becomes the single place where s
 🚧 Currently in active development.
 
 We aim to build a modern, intelligent platform that makes academic information simple, searchable, and accessible for every student.
+
+## Backend Progress
+
+- [x] FastAPI
+- [x] Modular Routing
+- [x] SQLite
+- [x] SQLAlchemy
+- [x] Notice Model
+- [x] Swagger Documentation
