@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 
+
 class NoticeCreate(BaseModel):
     title: str
     message: str

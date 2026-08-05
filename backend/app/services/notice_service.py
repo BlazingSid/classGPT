@@ -20,3 +20,15 @@ def create_notice(db: Session, notice: NoticeCreate):
 
 def get_all_notices(db: Session):
     return db.query(Notice).all()
+
+
+def delete_notice(db: Session, notice_id: int):
+    notice = db.query(Notice).filter(Notice.id == notice_id).first()
+
+    if notice is None:
+        return None
+
+    db.delete(notice)
+    db.commit()
+
+    return notice
