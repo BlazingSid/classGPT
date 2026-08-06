@@ -1,11 +1,21 @@
 from fastapi import APIRouter, UploadFile, File
 
-router = APIRouter(prefix="/upload", tags=["Upload"])
+from app.services.upload_service import save_pdf, extract_text
+
+router = APIRouter(
+    prefix="/upload",
+    tags=["Files"]
+)
 
 
 @router.post("/")
-async def upload_file(file: UploadFile = File(...)):
+async def upload_pdf(file: UploadFile = File(...)):
+    file_path = save_pdf(file)
+
+    text = extract_text(file_path)
+
     return {
         "filename": file.filename,
-        "content_type": file.content_type
+        "characters": len(text),
+        "preview": text[:500]
     }
