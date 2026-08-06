@@ -1,6 +1,7 @@
 import os
 import fitz
 
+from app.services.chunk_service import chunk_text
 
 UPLOAD_FOLDER = "uploads"
 
@@ -27,3 +28,18 @@ def extract_text(file_path):
     document.close()
 
     return text
+
+
+def process_pdf(file):
+    file_path = save_pdf(file)
+
+    text = extract_text(file_path)
+
+    chunks = chunk_text(text)
+
+    return {
+        "filename": file.filename,
+        "characters": len(text),
+        "chunks": len(chunks),
+        "preview": chunks[0] if chunks else ""
+    }

@@ -1,0 +1,100 @@
+[33mcommit 014916f4913999f7696627a7adef075c1c2f8bd2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mbackend[m[33m)[m
+Author: BlazingSid <attarshahid62@gmail.com>
+Date:   Fri Aug 7 00:28:33 2026 +0530
+
+    Installed Chromdb
+
+ .../__pycache__/isympy.cpython-312.pyc             |   Bin [31m0[m -> [32m11029[m bytes
+ .../__pycache__/jsonpatch.cpython-312.pyc          |   Bin [31m0[m -> [32m35328[m bytes
+ .../__pycache__/jsonpointer.cpython-312.pyc        |   Bin [31m0[m -> [32m13038[m bytes
+ .../site-packages/__pycache__/six.cpython-312.pyc  |   Bin [31m0[m -> [32m41335[m bytes
+ .../__pycache__/threadpoolctl.cpython-312.pyc      |   Bin [31m0[m -> [32m58641[m bytes
+ .../Lib/site-packages/_distutils_hack/__init__.py  |   239 [32m+[m
+ .../__pycache__/__init__.cpython-312.pyc           |   Bin [31m0[m -> [32m10589[m bytes
+ .../__pycache__/override.cpython-312.pyc           |   Bin [31m0[m -> [32m285[m bytes
+ .../Lib/site-packages/_distutils_hack/override.py  |     1 [32m+[m
+ backend/.venv/Lib/site-packages/_yaml/__init__.py  |    33 [32m+[m
+ .../_yaml/__pycache__/__init__.cpython-312.pyc     |   Bin [31m0[m -> [32m856[m bytes
+ ...ada92cb5d92a588d1b93__mypyc.cp312-win_amd64.pyd |   Bin [31m0[m -> [32m227328[m bytes
+ .../aiohappyeyeballs-2.7.1.dist-info/INSTALLER     |     1 [32m+[m
+ .../aiohappyeyeballs-2.7.1.dist-info/METADATA      |   124 [32m+[m
+ .../aiohappyeyeballs-2.7.1.dist-info/RECORD        |    16 [32m+[m
+ .../aiohappyeyeballs-2.7.1.dist-info/WHEEL         |     4 [32m+[m
+ .../licenses/LICENSE                               |   279 [32m+[m
+ .../Lib/site-packages/aiohappyeyeballs/__init__.py |    14 [32m+[m
+ .../__pycache__/__init__.cpython-312.pyc           |   Bin [31m0[m -> [32m501[m bytes
+ .../__pycache__/_staggered.cpython-312.pyc         |   Bin [31m0[m -> [32m7889[m bytes
+ .../__pycache__/impl.cpython-312.pyc               |   Bin [31m0[m -> [32m9818[m bytes
+ .../__pycache__/types.cpython-312.pyc              |   Bin [31m0[m -> [32m558[m bytes
+ .../__pycache__/utils.cpython-312.pyc              |   Bin [31m0[m -> [32m3431[m bytes
+ .../site-packages/aiohappyeyeballs/_staggered.py   |   197 [32m+[m
+ .../Lib/site-packages/aiohappyeyeballs/impl.py     |   247 [32m+[m
+ .../Lib/site-packages/aiohappyeyeballs/py.typed    |     0
+ .../Lib/site-packages/aiohappyeyeballs/types.py    |    14 [32m+[m
+ .../Lib/site-packages/aiohappyeyeballs/utils.py    |    82 [32m+[m
+ .../aiohttp-3.14.3.dist-info/INSTALLER             |     1 [32m+[m
+ .../aiohttp-3.14.3.dist-info/METADATA              |   257 [32m+[m
+ .../site-packages/aiohttp-3.14.3.dist-info/RECORD  |   130 [32m+[m
+ .../site-packages/aiohttp-3.14.3.dist-info/WHEEL   |     5 [32m+[m
+ .../aiohttp-3.14.3.dist-info/licenses/LICENSE.txt  |   201 [32m+[m
+ .../licenses/vendor/llhttp/LICENSE                 |    22 [32m+[m
+ .../aiohttp-3.14.3.dist-info/top_level.txt         |     1 [32m+[m
+ .../.venv/Lib/site-packages/aiohttp/__init__.py    |   279 [32m+[m
+ .../aiohttp/__pycache__/__init__.cpython-312.pyc   |   Bin [31m0[m -> [32m5336[m bytes
+ .../__pycache__/_cookie_helpers.cpython-312.pyc    |   Bin [31m0[m -> [32m11241[m bytes
+ .../aiohttp/__pycache__/abc.cpython-312.pyc        |   Bin [31m0[m -> [32m13221[m bytes
+ .../__pycache__/base_protocol.cpython-312.pyc      |   Bin [31m0[m -> [32m5290[m bytes
+ .../aiohttp/__pycache__/client.cpython-312.pyc     |   Bin [31m0[m -> [32m61447[m bytes
+ .../__pycache__/client_exceptions.cpython-312.pyc  |   Bin [31m0[m -> [32m18293[m bytes
+ .../client_middleware_digest_auth.cpython-312.pyc  |   Bin [31m0[m -> [32m17865[m bytes
+ .../__pycache__/client_middlewares.cpython-312.pyc |   Bin [31m0[m -> [32m2265[m bytes
+ .../__pycache__/client_proto.cpython-312.pyc       |   Bin [31m0[m -> [32m13783[m bytes
+ .../__pycache__/client_reqrep.cpython-312.pyc      |   Bin [31m0[m -> [32m66340[m bytes
+ .../aiohttp/__pycache__/client_ws.cpython-312.pyc  |   Bin [31m0[m -> [32m27534[m bytes
+ .../__pycache__/compression_utils.cpython-312.pyc  |   Bin [31m0[m -> [32m21830[m bytes
+ .../aiohttp/__pycache__/connector.cpython-312.pyc  |   Bin [31m0[m -> [32m77933[m bytes
+ .../aiohttp/__pycache__/cookiejar.cpython-312.pyc  |   Bin [31m0[m -> [32m28205[m bytes
+ .../aiohttp/__pycache__/formdata.cpython-312.pyc   |   Bin [31m0[m -> [32m7701[m bytes
+ .../aiohttp/__pycache__/hdrs.cpython-312.pyc       |   Bin [31m0[m -> [32m7973[m bytes
+ .../aiohttp/__pycache__/helpers.cpython-312.pyc    |   Bin [31m0[m -> [32m45977[m bytes
+ .../aiohttp/__pycache__/http.cpython-312.pyc       |   Bin [31m0[m -> [32m1814[m bytes
+ .../__pycache__/http_exceptions.cpython-312.pyc    |   Bin [31m0[m -> [32m6388[m bytes
+ .../__pycache__/http_parser.cpython-312.pyc        |   Bin [31m0[m -> [32m43660[m bytes
+ .../__pycache__/http_websocket.cpython-312.pyc     |   Bin [31m0[m -> [32m1068[m bytes
+ .../__pycache__/http_writer.cpython-312.pyc        |   Bin [31m0[m -> [32m14754[m bytes
+ .../aiohttp/__pycache__/log.cpython-312.pyc        |   Bin [31m0[m -> [32m716[m bytes
+ .../aiohttp/__pycache__/multipart.cpython-312.pyc  |   Bin [31m0[m -> [32m58087[m bytes
+ .../aiohttp/__pycache__/payload.cpython-312.pyc    |   Bin [31m0[m -> [32m49502[m bytes
+ .../__pycache__/payload_streamer.cpython-312.pyc   |   Bin [31m0[m -> [32m4403[m bytes
+ .../__pycache__/pytest_plugin.cpython-312.pyc      |   Bin [31m0[m -> [32m18539[m bytes
+ .../aiohttp/__pycache__/resolver.cpython-312.pyc   |   Bin [31m0[m -> [32m11963[m bytes
+ .../aiohttp/__pycache__/streams.cpython-312.pyc    |   Bin [31m0[m -> [32m32719[m bytes
+ .../__pycache__/tcp_helpers.cpython-312.pyc        |   Bin [31m0[m -> [32m1762[m bytes
+ .../aiohttp/__pycache__/test_utils.cpython-312.pyc |   Bin [31m0[m -> [32m37257[m bytes
+ .../aiohttp/__pycache__/tracing.cpython-312.pyc    |   Bin [31m0[m -> [32m21805[m bytes
+ .../aiohttp/__pycache__/typedefs.cpython-312.pyc   |   Bin [31m0[m -> [32m2321[m bytes
+ .../aiohttp/__pycache__/web.cpython-312.pyc        |   Bin [31m0[m -> [32m16180[m bytes
+ .../aiohttp/__pycache__/web_app.cpython-312.pyc    |   Bin [31m0[m -> [32m27010[m bytes
+ .../__pycache__/web_exceptions.cpython-312.pyc     |   Bin [31m0[m -> [32m15042[m bytes
+ .../__pycache__/web_fileresponse.cpython-312.pyc   |   Bin [31m0[m -> [32m17287[m bytes
+ .../aiohttp/__pycache__/web_log.cpython-312.pyc    |   Bin [31m0[m -> [32m11971[m bytes
+ .../__pycache__/web_middlewares.cpython-312.pyc    |   Bin [31m0[m -> [32m5596[m bytes
+ .../__pycache__/web_protocol.cpython-312.pyc       |   Bin [31m0[m -> [32m34140[m bytes
+ .../__pycache__/web_request.cpython-312.pyc        |   Bin [31m0[m -> [32m41147[m bytes
+ .../__pycache__/web_response.cpython-312.pyc       |   Bin [31m0[m -> [32m41335[m bytes
+ .../__pycache__/web_routedef.cpython-312.pyc       |   Bin [31m0[m -> [32m11845[m bytes
+ .../aiohttp/__pycache__/web_runner.cpython-312.pyc |   Bin [31m0[m -> [32m20086[m bytes
+ .../aiohttp/__pycache__/web_server.cpython-312.pyc |   Bin [31m0[m -> [32m5157[m bytes
+ .../__pycache__/web_urldispatcher.cpython-312.pyc  |   Bin [31m0[m -> [32m68326[m bytes
+ .../aiohttp/__pycache__/web_ws.cpython-312.pyc     |   Bin [31m0[m -> [32m36939[m bytes
+ .../aiohttp/__pycache__/worker.cpython-312.pyc     |   Bin [31m0[m -> [32m12413[m bytes
+ .../Lib/site-packages/aiohttp/_cookie_helpers.py   |   361 [32m+[m
+ .../.venv/Lib/site-packages/aiohttp/_cparser.pxd   |    89 [32m+[m
+ .../Lib/site-packages/aiohttp/_find_header.pxd     |     2 [32m+[m
+ .../.venv/Lib/site-packages/aiohttp/_headers.pxi   |    83 [32m+[m
+ .../aiohttp/_http_parser.cp312-win_amd64.pyd       |   Bin [31m0[m -> [32m260608[m bytes
+ .../Lib/site-packages/aiohttp/_http_parser.pyx     |   984 [32m+[m
+ .../aiohttp/_http_writer.cp312-win_amd64.pyd       |   Bin [31m0[m -> [32m44544[m bytes
+ .../Lib/site-packages/aiohttp/_http_writer.pyx     |   164 [32m+[m
+ .../site-packages/aiohttp/_websocket/__init__.py   |     1 [32m+[m
+ .../__pycache__/__

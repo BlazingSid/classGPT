@@ -1,6 +1,6 @@
 from fastapi import APIRouter, UploadFile, File
 
-from app.services.upload_service import save_pdf, extract_text
+from app.services.upload_service import process_pdf
 
 router = APIRouter(
     prefix="/upload",
@@ -10,12 +10,4 @@ router = APIRouter(
 
 @router.post("/")
 async def upload_pdf(file: UploadFile = File(...)):
-    file_path = save_pdf(file)
-
-    text = extract_text(file_path)
-
-    return {
-        "filename": file.filename,
-        "characters": len(text),
-        "preview": text[:500]
-    }
+    return process_pdf(file)
