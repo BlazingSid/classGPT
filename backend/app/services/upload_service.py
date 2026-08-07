@@ -1,5 +1,6 @@
 import os
 import fitz
+from app.services.vector_service import store_chunks
 
 from app.services.chunk_service import chunk_text
 
@@ -36,6 +37,8 @@ def process_pdf(file):
     text = extract_text(file_path)
 
     chunks = chunk_text(text)
+    
+    store_chunks(file.filename, chunks)
 
     return {
         "filename": file.filename,

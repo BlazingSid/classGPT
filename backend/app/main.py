@@ -12,6 +12,7 @@ from app.api.routes.upload import router as upload_router
 from app.api.routes.subject import router as subjects_router
 from app.api.routes.notice import router as notices_router
 from app.api.routes.timetable import router as timetable_router
+from app.api.routes.search import router as search_router
 
 Base.metadata.create_all(bind=engine)
 
@@ -26,6 +27,7 @@ app.include_router(upload_router)
 app.include_router(subjects_router)
 app.include_router(notices_router)
 app.include_router(timetable_router)
+app.include_router(search_router)
 
 
 @app.get("/")
