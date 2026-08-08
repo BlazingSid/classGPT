@@ -9,5 +9,8 @@ router = APIRouter(
 
 
 @router.get("/")
-def search(query: str):
-    return search_chunks(query)
+def search(query: str, n_results: int =3):
+    return search_chunks(
+        query,
+        n_results   
+    )
