@@ -17,3 +17,6 @@ uploads/
 
 # macOS
 .DS_Store
+
+# ChromaDB
+chroma_db/
