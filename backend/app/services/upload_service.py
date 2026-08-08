@@ -3,6 +3,7 @@ import fitz
 from app.services.vector_service import store_chunks
 
 from app.services.chunk_service import chunk_text
+from app.services.vector_service import store_chunks
 
 UPLOAD_FOLDER = "uploads"
 
@@ -38,11 +39,15 @@ def process_pdf(file):
 
     chunks = chunk_text(text)
     
-    store_chunks(file.filename, chunks)
+    stored_chunks = store_chunks(
+        file.filename,
+        chunks
+    )
 
     return {
         "filename": file.filename,
         "characters": len(text),
         "chunks": len(chunks),
-        "preview": chunks[0] if chunks else ""
+        "stored_chunks": stored_chunks,
+        "status": "PDF processed successfully"
     }

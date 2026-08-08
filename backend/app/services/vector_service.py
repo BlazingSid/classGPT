@@ -1,35 +1,44 @@
 import chromadb
-
 from chromadb.utils import embedding_functions
 
-client = chromadb.PersistentClient(path="chroma_db")
+
+client = chromadb.PersistentClient(
+    path="chroma_db"
+)
+
+
+embedding_function = embedding_functions.SentenceTransformerEmbeddingFunction(
+    model_name="all-MiniLM-L6-v2"
+)
+
 
 collection = client.get_or_create_collection(
     name="classgpt_notes",
-    embedding_function=embedding_functions.SentenceTransformerEmbeddingFunction(
-        model_name="all-MiniLM-L6-v2"
-    )
+    embedding_function=embedding_function
 )
 
 
 def store_chunks(filename: str, chunks: list[str]):
-    ids = []
+    ids = [
+        f"{filename}_{i}"
+        for i in range(len(chunks))
+    ]
 
-    metadatas = []
-
-    for i, chunk in enumerate(chunks):
-        ids.append(f"{filename}_{i}")
-
-        metadatas.append({
+    metadatas = [
+        {
             "filename": filename,
-            "chunk": i
-        })
+            "chunk_index": i
+        }
+        for i in range(len(chunks))
+    ]
 
     collection.add(
         ids=ids,
         documents=chunks,
         metadatas=metadatas
     )
+
+    return len(chunks)
 
 
 def search_chunks(query: str, n_results: int = 3):
