@@ -47,4 +47,6 @@ def search_chunks(query: str, n_results: int = 3):
         n_results=n_results
     )
 
-    return results
+    documents = results.get("documents", [[]])[0]
+
+    return documents

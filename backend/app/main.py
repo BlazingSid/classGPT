@@ -1,4 +1,7 @@
 from fastapi import FastAPI
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from app.database.database import engine
 from app.database.base import Base

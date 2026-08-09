@@ -1,22 +1,16 @@
 # Python
-.venv/
 __pycache__/
-*.pyc
+*.py[cod]
 
-# Database
-*.db
+# Virtual environment
+.venv/
+venv/
 
-# Uploads
-uploads/
-
-# Environment
+# Environment variables
 .env
+*.env
 
-# VS Code
-.vscode/
-
-# macOS
-.DS_Store
-
-# ChromaDB
+# Local data
+*.db
+uploads/
 chroma_db/
