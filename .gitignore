@@ -1,17 +1,23 @@
-# Local AI/vector database
-chroma_db/
-backend/chroma_db/
-
-# Local database
-*.db
-
-# Python cache
+# Python
 __pycache__/
 *.py[cod]
+
+# Virtual environment
+.venv/
+backend/.venv/
 
 # Environment variables
 .env
 *.env
 
-# Uploaded files
-uploads/
+# Databases
+*.db
+*.sqlite3
+
+# ChromaDB
+chroma_db/
+backend/chroma_db/
+
+# Temporary testing UI
+test_ui/
+backend/test_ui/
