@@ -44,9 +44,21 @@ def store_chunks(filename: str, chunks: list[str]):
 def search_chunks(query: str, n_results: int = 3):
     results = collection.query(
         query_texts=[query],
-        n_results=n_results
+        n_results=n_results,
+        include=["documents", "distances"]
     )
 
     documents = results.get("documents", [[]])[0]
+    distances = results.get("distances", [[]])[0]
+
+    print("\n--- CHROMADB SEARCH ---")
+    print("Query:", query)
+
+    for i, (document, distance) in enumerate(zip(documents, distances)):
+        print(f"\nResult {i + 1}")
+        print("Distance:", distance)
+        print("Document:", document[:300])
+
+    print("-----------------------\n")
 
     return documents

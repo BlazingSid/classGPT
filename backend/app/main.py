@@ -3,11 +3,14 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+from fastapi.middleware.cors import CORSMiddleware
 from app.database.database import engine
 from app.database.base import Base
 
 # Import models
+from app.models.user import User
 from app.models.notice import Notice
+
 
 # Import routers
 from app.api.routes.chat import router as chat_router
@@ -16,6 +19,7 @@ from app.api.routes.subject import router as subjects_router
 from app.api.routes.notice import router as notices_router
 from app.api.routes.timetable import router as timetable_router
 from app.api.routes.search import router as search_router
+from app.api.routes.auth import router as auth_router
 
 Base.metadata.create_all(bind=engine)
 
@@ -25,12 +29,21 @@ app = FastAPI(
     version="0.1.0"
 )
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 app.include_router(chat_router)
 app.include_router(upload_router)
 app.include_router(subjects_router)
 app.include_router(notices_router)
 app.include_router(timetable_router)
 app.include_router(search_router)
+app.include_router(auth_router)
 
 
 @app.get("/")
