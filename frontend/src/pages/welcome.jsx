@@ -240,15 +240,7 @@ function Welcome() {
                   ✓
                 </div>
 
-                <div>
-                  <p className="text-xs font-medium text-white">
-                    Knowledge grounded
-                  </p>
-
-                  <p className="text-[10px] text-slate-500">
-                    Course material
-                  </p>
-                </div>
+                
 
               </div>
 
